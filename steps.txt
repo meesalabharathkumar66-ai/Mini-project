@@ -1,0 +1,44 @@
+S.A.M — CONFIGURATION STEPS
+==============================
+
+Follow these steps to get your project running with your own details.
+
+STEP 1: Update your .env file
+-----------------------------
+Open the file 'server/.env' and replace the placeholders:
+
+1. MONGODB_URI: 
+   - Keep 'mongodb://127.0.0.1:27017/crt-dams' if you have MongoDB installed.
+   - If you use MongoDB Atlas, paste your connection string here.
+
+2. ENCRYPTION_SECRET:
+   - Delete 'your_encryption_secret_key_32_chars'.
+   - Type 32 random letters/numbers. Example: '9f8e7d6c5b4a3210qwertyuiopasdfgh'
+
+3. GOOGLE_CLIENT_ID & GOOGLE_CLIENT_SECRET:
+   - Paste the keys you got from the Google Cloud Console (Follow the guide I sent in the chat).
+
+4. JWT_SECRET:
+   - Change 'your_jwt_secret_key_here_change_it' to any random word (like 'my-secure-app-2026').
+
+
+STEP 2: Run the Project
+-----------------------
+1. Save the .env file (Cmd + S).
+2. Go to the main 'CRT-DAMS' folder in your Finder.
+3. Double-click the 'start.command' file.
+
+The project will now open at http://localhost:3000 with your own security keys active!
+
+STEP 3: Deploy & Upload to Git
+------------------------------
+1. Initialize Git: `git init` in the root folder.
+2. Add files: `git add .`
+3. Commit: `git commit -m "Major Security Update: 15+ Advanced Features"`
+4. Create Repository: Create a private repo on GitHub/GitLab.
+5. Push: `git remote add origin YOUR_REPO_URL` then `git push -u origin main`
+
+Deployment:
+- Backend: Use Render or Railway. Set Environment Variables in their dashboard.
+- Frontend: Use Vercel or Netlify. Link your Git repo for auto-deploy.
+- Database: Use MongoDB Atlas (Free Tier) for production hosting.

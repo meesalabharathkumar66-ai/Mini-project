@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #000000;
+    --text-main: #FFFFFF;
+    --primary-color: #CCFF00;
+    --primary-glow: rgba(204, 255, 0, 0.4);
+    --surface-border: rgba(255, 255, 255, 0.05);
+    --card-bg: rgba(0, 0, 0, 0.6);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    @apply overflow-x-hidden transition-colors duration-500 ease-in-out;
+    min-height: 100vh;
+  }
+  
+  html {
+    background-color: var(--bg-color);
+    transition: background-color 0.5s ease-in-out;
+  }
+}
+
+
+@layer components {
+  .glass-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--surface-border);
+    @apply backdrop-blur-3xl shadow-2xl transition-all duration-500;
+  }
+  
+  .glass-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-glow);
+  }
+
+  .glass-input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--surface-border);
+    color: var(--text-main);
+    @apply rounded-lg px-4 py-2 focus:outline-none transition-all;
+  }
+
+  .glass-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+
+
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: #000000;
+    @apply font-black px-6 py-2 rounded-lg transition-all active:scale-95 flex items-center justify-center gap-2;
+    box-shadow: 0 0 20px var(--primary-glow);
+  }
+  
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply font-black px-6 py-2 rounded-lg transition-all active:scale-95 border;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700;
+}

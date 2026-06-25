@@ -1,0 +1,10 @@
+
+> server@1.0.0 dev
+> tsx watch src/index.ts
+
+◇ injected env (10) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+Server running in development mode on port 8000
+MongoDB Connected: ac-87bix5i-shard-00-00.t2gd0s8.mongodb.net
